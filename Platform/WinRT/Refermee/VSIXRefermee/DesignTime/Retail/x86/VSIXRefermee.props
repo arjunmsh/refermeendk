@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VSIXRefermeePath>$(FrameworkSDKRoot)\..\v8.1\ExtensionSDKs\VSIXRefermee\1.0\</VSIXRefermeePath>
+    <IncludePath>$(VSIXRefermeePath)DesignTime\CommonConfiguration\Neutral\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VSIXRefermeePath)DesignTime\Retail\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Link>
+      <AdditionalDependencies>Refermee.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>
